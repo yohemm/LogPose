@@ -1,0 +1,41 @@
+name: LogPose
+version: '${project.version}'
+main: fr.yohem.logpose.LogPose
+commands:
+  bousole:
+    description: give de bousole
+    aliases: bsl
+    usage: donner une bousole de navigation
+    permission: giveBousole
+  compass:
+    description: give de Compass
+    aliases: cmps
+    usage: donner une Compass de navigation vierge
+    permission: giveCompass
+  setCompass:
+    description: set les coordonnées de la Compass
+    aliases: setcmps
+    usage: /setCompass x y z
+    permission: useCompass
+  focusCompass:
+    description: met a jour les directions des compass de navigation sur les coordonné de celui dans les mains
+    aliases: fcmps
+    usage: mettre a jour la direction a suivre des Compass de navigation
+    permission: useCompass
+  logPose:
+    description: liste des commandes a effectuer pour l'orientation
+    aliases: lp
+    usage: liste des commandes a effectuer pour l'orientation
+permissions:
+  giveBousole:
+    default: op
+    description: give de Bousole
+  giveCompass:
+    default: op
+    description: give de Compass
+  useBousole:
+    default: true
+    description: use de Bousole
+  useCompass:
+    default: true
+    description: use de Compass
